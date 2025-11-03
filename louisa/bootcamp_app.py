@@ -6,6 +6,8 @@ init(extra_options="-ignore_unrecognized_res")
 
 parser = argparse.ArgumentParser()
 #add line here to add an argument
-parser.add_argument("filename", help="Path to the input PDB file")
+parser.add_argument("structure", help="Path to the input PDB file")
 args = parser.parse_args()
-print(f"The filename passed in is: {args.filename}")
+mypose = pose_from_pdb(args.structure)
+nr_res=mypose.total_residue()
+print(f"{args.structure} has {nr_res} residues")
