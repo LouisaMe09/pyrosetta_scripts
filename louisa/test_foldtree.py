@@ -1,4 +1,4 @@
-from foldtree import *
+from foldtree2 import *
 
 edges = [
     (7, 1),
