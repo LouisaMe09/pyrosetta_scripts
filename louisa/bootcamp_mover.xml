@@ -1,0 +1,14 @@
+# Embedded RosettaScripts XML:
+EMBEDDED_XML = """<ROSETTASCRIPTS>
+  <SCOREFXNS>
+    <ScoreFunction name="sfxn" weights="ref2015"/>
+  </SCOREFXNS>
+  <MOVERS>  <BootCampMover name="bootcamp" 
+                   num_iterations="1000" 
+                   min_phi="-10" max_phi="10" 
+                   min_psi="-10" max_psi="10"
+                   scorefxn="sfxn"/>
+  </MOVERS>
+  <PROTOCOLS> <Add mover_name="bootcamp"/>
+  </PROTOCOLS>
+</ROSETTASCRIPTS>
